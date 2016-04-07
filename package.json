@@ -19,18 +19,6 @@
   "system" : {
       "ext" : {
           "stache" : "can/view/stache/system"
-      },
-      "paths" : {
-        "test/*"      : "modules/test/*.js",
-        "test/*.stache"      : "modules/test/*.stache"
-      },
-      "envs": {
-        "production": {
-            "paths": {        
-                "test/*"      : "test/*.js",
-                "test/*.stache"      : "test/*.stache"
-            }
-         }
-      }         
+      }
   }
 }

@@ -1,10 +1,5 @@
-steal('can',
-      'test/AppControl.stache',
-//      'test/AnotherTemplate.stache',      
-function (can,
-          view) {
-'use strict';
-
+define(['can','modules/foobar/AppControl.stache'],function(can,view) {
+    
     return can.Control.extend({
 		  
         
@@ -21,18 +16,18 @@ function (can,
             
             var me = this;
             
-            steal('test/AnotherTemplate.stache',function(another){
-                
-                var viewFrag = can.view(another);
-            
+            console.log('click!');
+            System.import('modules/foobar/AnotherTemplate.stache!').then(function(renderer){
+               
+                console.log('here');
+                var viewFrag = renderer();
                 me.element.empty();
-                me.element.append(viewFrag);                
+                me.element.append(viewFrag);               
                 
             });
-            
             
         }
                                
     });
-
+    
 });

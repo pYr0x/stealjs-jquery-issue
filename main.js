@@ -1,6 +1,7 @@
-steal('jquery',
-      'test/AppControl.js',
-function(jQuery,AppControl) {
-    
+define(['jquery','modules/foobar/AppControl'],
+function(jQuery,AppControl){
+
     var appControl = new AppControl('#appControl');
+    
 });
+
